@@ -1,1 +1,125 @@
+/* Global */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  color: #111;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+header h1 {
+  font-weight: 600;
+}
+.dark-toggle {
+  background: #4f46e5;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.dark .dark-toggle {
+  background: #2563eb;
+}
+
+/* Input Section */
+.create {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.create input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.create button {
+  background: #4f46e5;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.create button:hover {
+  background: #6366f1;
+}
+
+/* Lists */
+.lists {
+  display: flex;
+  gap: 24px;
+}
+.left { flex: 1; }
+.right { width: 350px; }
+
+ul { list-style: none; padding: 0; }
+li {
+  background: linear-gradient(145deg, #ffffff, #f0f0f3);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.05), -5px -5px 10px rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.small {
+  font-size: 0.85rem;
+  color: #666;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Buttons in each todo */
+li button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: background 0.2s ease;
+}
+li button:hover { background: #6366f1; }
+
+/* Calendar view */
+#calendar {
+  margin-top: 8px;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  min-height: 120px;
+}
+body.dark #calendar { background: #374151; color: #f9fafb; }
 
